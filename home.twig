@@ -1,0 +1,63 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<a name="top"></a>
+
+<div class="page">
+    <header>
+        <div class="wrapper head clearfix">
+            <div class="three columns clearfix">
+                {{widget('content', 'email-us', {content: '<h6>Telephone</h6>', lines: 'all'})|raw}}
+                {{widget('clicktocall', 'telephone-us', {phoneText: '0800 123 123'})|raw}}
+            </div>
+                <!--end four columns-->
+            <div class="six columns">
+                {{widget('companyname', 'the', {"business": "The"})|raw}}
+                {{widget('companyname', 'oyster-bar', {"business": "Oyster Bar"})|raw}}
+            </div>
+                <!--end six columns-->    
+            <div class="three columns"> 
+                {{widget('content', 'email-us', {content: '<h6>Email us</h6>', lines: 'all'})|raw}}
+                <div class="email-us">
+                    {{widget('content', 'email-us', {content: '<a href="mailto:">enq@oysterbar.com</a>', lines: 'all'})|raw}}
+                </div>
+            </div><!--end three columns-->         
+        </div><!--end wrapper-->
+            {{widget('menusections', 'menusections1', {})|raw}}
+        </header>
+
+    <div class="main">
+        {{widget('menu', 'menu1', {})|raw}}
+    </div>
+
+    <footer>
+        <div class="wrapper clearfix">
+            <div class="four columns clearfix">
+                {{widget('content', 'email-header', {content: '<h3>CONTACT US</h3>', lines: 'all'})|raw}}
+                {{widget('clicktocall', 'telephone-us', {phoneText: '0800 123 123'})|raw}}
+                {{widget('content', 'email-us', {content: '<p><a href="mailto:">enq@oysterbar.com</a></p>', lines: 'all'})|raw}}
+            </div>
+                <!--end four columns-->
+            <div class="four columns">
+                {{widget('content', 'address-header', {content: '<h3>FIND US</h3>', lines: 'all'})|raw}}
+                {{widget('companyaddress', 'our-address', {})|raw}}
+            </div>
+                <!--end six columns-->  
+            <div class="four columns"> 
+                {{widget('content', 'social-header', {content: '<h3>STAY UP TO DATE</h3>', lines: 'all'})|raw}}
+                {{widget('content', 'social-twitter', {content: 'Twitter', lines: 'all'})|raw}}   
+                {{widget('content', 'social-facebook', {content: 'Facebook', lines: 'all'})|raw}} 
+                {{widget('content', 'social-instagram', {content: 'Instagram', lines: 'all'})|raw}}              
+            </div>
+                <!--end four columns-->  
+        </div><!--end clearfix-->  
+    </footer>
+    <div class="back-to-top">
+        <div class="wrapper">
+            {{widget('content', 'backtotop', {content: '<a id="top" href="">Back to top</a>', lines: 'all'})|raw}}
+        </div>
+    </div>
+</div> <!--end page-->
+
+{% endblock %}

@@ -303,6 +303,19 @@ header {
 /* ===============================
    5. Menu Navigation
    =============================== */
+   
+@media @large-mobile {
+	.widget.menusections {
+		border-bottom: none;
+		ul {
+			padding: 0 0 2em;
+			li {
+				margin: 0;
+			}
+		}
+	}
+
+}
 
 .menusections {
 	text-align: center;
@@ -505,7 +518,7 @@ header {
 					column-count: 1;
 				}
 			}
-			@media @mobile {
+			@media @tablet {
 				column-count: 1;
 				-moz-column-count: 1;
 				-webkit-column-count: 1;

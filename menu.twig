@@ -4,47 +4,51 @@
 
 <a name="top"></a>
 
-<div class="page">
-    <header>
+<div class="page-container">
+    <header class="bk-header">
         <div class="wrapper head clearfix">
-            <div class="three columns clearfix">
-                {{widget('content', 'email-us', {content: '<h6>Telephone</h6>', lines: 'all'})|raw}}
+            <div class="three cols clearfix">
+                {{widget('content', 'telephone-us-header', {content: '<h6>Telephone</h6>', lines: 'all'})|raw}}
                 {{widget('clicktocall', 'telephone-us', {phoneText: '0800 123 123'})|raw}}
             </div>
                 <!--end four columns-->
-            <div class="six columns">
-                {{widget('companyname', 'the', {"business": "The"})|raw}}
-                {{widget('companyname', 'oyster-bar', {"business": "Oyster Bar"})|raw}}
+            <div class="six cols">
+                {{widget('companyname', 'oyster-bar', {"business": "profile"})|raw}}
             </div>
                 <!--end six columns-->    
-            <div class="three columns"> 
-                {{widget('content', 'email-us', {content: '<h6>Email us</h6>', lines: 'all'})|raw}}
+            <div class="three cols"> 
+                {{widget('content', 'email-us-header', {content: '<h6>Email us</h6>', lines: 'all'})|raw}}
                 <div class="email-us">
                     {{widget('content', 'email-us', {content: '<a href="mailto:">enq@oysterbar.com</a>', lines: 'all'})|raw}}
                 </div>
-            </div><!--end three columns-->         
+            </div><!--end three columns--> 
+            <div class="wrapper clearfix">
+                {% if pages|length > 1 %}
+                    {{widget('extendednavigation align-center', 'navigationheader', {})|raw}}
+                {% endif %}        
+            </div>
         </div><!--end wrapper-->
-            {{widget('menusections', 'menusections1', {})|raw}}
-        </header>
+    </header>
 
     <div class="main">
+        {{widget('menusections align-center', 'menusections1', {})|raw}}
         {{widget('menu', 'menu1', {})|raw}}
     </div>
 
-    <footer>
+    <footer class="bk-footer">
         <div class="wrapper clearfix">
-            <div class="four columns clearfix">
-                {{widget('content', 'email-header', {content: '<h3>CONTACT US</h3>', lines: 'all'})|raw}}
+            <div class="four cols clearfix">
+                {{widget('content', 'contact-us-header', {content: '<h3>CONTACT US</h3>', lines: 'all'})|raw}}
                 {{widget('clicktocall', 'telephone-us', {phoneText: '0800 123 123'})|raw}}
                 {{widget('content', 'email-us', {content: '<p><a href="mailto:">enq@oysterbar.com</a></p>', lines: 'all'})|raw}}
             </div>
                 <!--end four columns-->
-            <div class="four columns">
+            <div class="four cols">
                 {{widget('content', 'address-header', {content: '<h3>FIND US</h3>', lines: 'all'})|raw}}
                 {{widget('companyaddress', 'our-address', {})|raw}}
             </div>
                 <!--end six columns-->  
-            <div class="four columns"> 
+            <div class="four cols"> 
                 {{widget('content', 'social-header', {content: '<h3>STAY UP TO DATE</h3>', lines: 'all'})|raw}}
                 {{widget('content', 'social-twitter', {content: 'Twitter', lines: 'all'})|raw}}   
                 {{widget('content', 'social-facebook', {content: 'Facebook', lines: 'all'})|raw}} 

@@ -8,7 +8,7 @@
     <header class="bk-header">
         <div class="wrapper head clearfix">
             <div class="three cols clearfix">
-                {{widget('content', 'email-us', {content: '<h6>Telephone</h6>', lines: 'all'})|raw}}
+                {{widget('content', 'telephone-us-header', {content: '<h6>Telephone</h6>', lines: 'all'})|raw}}
                 {{widget('clicktocall', 'telephone-us', {phoneText: '0800 123 123'})|raw}}
             </div>
                 <!--end four columns-->
@@ -17,16 +17,18 @@
             </div>
                 <!--end six columns-->    
             <div class="three cols"> 
-                {{widget('content', 'email-us', {content: '<h6>Email us</h6>', lines: 'all'})|raw}}
+                {{widget('content', 'email-us-header', {content: '<h6>Email us</h6>', lines: 'all'})|raw}}
                 <div class="email-us">
                     {{widget('content', 'email-us', {content: '<a href="mailto:">enq@oysterbar.com</a>', lines: 'all'})|raw}}
                 </div>
             </div><!--end three columns--> 
-             {% if pages|length > 1 %}
-                {{widget('extendednavigation align-center', 'navigationheader', {})|raw}}
-            {% endif %}        
+            <div class="wrapper clearfix">
+                 {% if pages|length > 1 %}
+                    {{widget('extendednavigation align-center', 'navigationheader', {})|raw}}
+                {% endif %}        
+            </div>
         </div><!--end wrapper-->
-        </header>
+    </header>
 
     <div class="main">
         {{zone('main')|raw}}   
@@ -35,7 +37,7 @@
     <footer class="bk-footer">
         <div class="wrapper clearfix">
             <div class="four cols clearfix">
-                {{widget('content', 'email-header', {content: '<h3>CONTACT US</h3>', lines: 'all'})|raw}}
+                {{widget('content', 'contact-us-header', {content: '<h3>CONTACT US</h3>', lines: 'all'})|raw}}
                 {{widget('clicktocall', 'telephone-us', {phoneText: '0800 123 123'})|raw}}
                 {{widget('content', 'email-us', {content: '<p><a href="mailto:">enq@oysterbar.com</a></p>', lines: 'all'})|raw}}
             </div>

@@ -68,7 +68,7 @@
         "font2": {
             "font-family": "\"PT Sans Narrow\", Arial, sans-serif",
             "font-size": "26px",
-            "font-weight": "500",
+            "font-weight": "600",
             "line-height": "34px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
@@ -128,7 +128,7 @@
         },
         "font9": {
             "font-family": "\"PT Mono\", \"Courier New\", Courier, monospace",
-            "font-size": "12px",
+            "font-size": "13px",
             "font-weight": "600",
             "line-height": "20px",
             "color": "@color-swatch5",

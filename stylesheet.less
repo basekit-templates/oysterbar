@@ -452,7 +452,7 @@ body {
 		/* SECTION AND SUB-SECTION HEADERS */
 
 		.menu-header, .menu-section-header {
-			padding: 1.5em 0 3em;
+			padding: 1.5em 0;
 
 			@media @tablet {
 				padding-bottom: 0.5em;
@@ -517,6 +517,7 @@ body {
 				display: block;
 				text-align: center;
 				margin: 1em 0;
+				padding: 0.25em 0;
 				width: 100%;
 				&:first-child {
 					margin-top: 0;
@@ -572,6 +573,7 @@ body {
 							h3 {
 								width: auto;
 								margin-top: 0.5em;
+								word-wrap: break-word;
 								&:before, &:after {
 									content: "\2605";
 									display: inline-block;
@@ -606,11 +608,11 @@ body {
 				}	/* end menu-item-promoted */
 
 				.inner-item {
-					display: inline-block;
+					display: block;
 
 					h3 {	/* menu-item-name and menu-section-item-name */ 
 						padding: 0;
-						margin: .92em 0 0.25em;
+						margin: 1em 0;
 						font-family: @font-swatch3-font-family;
 						color: @font-swatch3-color;
 					}
@@ -698,12 +700,18 @@ body {
 							}
 							.medium-spicy-icon.dietary-icon {
                                 background-color: darken(orange, 10%);
+                                border: none;
+                                color: white;
                             }
                             .hot-icon.dietary-icon {
                                 background-color: darken(#860b14, 10%);
+                                border: none;
+                                color: white;
                             }
                             .spicy-icon.dietary-icon {
                                 background-color: darken(green, 10%);
+                                border: none;
+                                color: white;
                             }
 							.not.spicy-icon {
 								display: none;

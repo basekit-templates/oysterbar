@@ -1160,3 +1160,32 @@ fieldset {
 		}
 
 }	/* end back-to-top */
+
+/* ===============================
+   PRINT STYLES 
+   =============================== */
+.print-mixin {
+    .menu .menu-header h1:before, .menu .menu-section-header h1:before, .menu .menu-header h1:after, .menu .menu-section-header h1:after,
+    .menu .menu-subsection-header:before,
+    .menu .menu-items li.menu-item-promoted:before {
+	    display: none;
+    }
+    .menu .menu-items li.menu-item-promoted .inner-item h3:before, .menu .menu-items li.menu-item-promoted .inner-item h3:after {
+	    color: #b9b9b9;
+    }
+    .menu .menu-items li.menu-item-promoted,
+    .menu-subsection {
+	    border: 1px solid #b9b9b9;
+    }
+    #backtotop {
+	    display: none;
+    }
+}
+ 
+@media print {
+    .print-mixin;
+}
+ 
+.bk-print {
+    .print-mixin;
+}

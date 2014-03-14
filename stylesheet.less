@@ -494,8 +494,13 @@ body {
 
 		}	/* end menu-header - menu-section-header */
 
+		/* PROMOTED SUBSECTION */
+		.menu-subsection-wrapper.menu-subsection-promoted {
+			background-color: fadeout(@color-swatch2, 50%);
+			border: 3px solid @color-swatch3;
+			padding:10px;
+		}
 		/* ITEMS */
-
 		.menu-items {
 			width: 100%;
 			column-count: 2;
@@ -773,13 +778,6 @@ body {
 						border:0;
 						background-color:transparent;
 					}
-
-					.menu-subsection-wrapper.menu-subsection-promoted {
-						background-color: rgba(1, 1, 1, 0.05);
-						border: 3px solid @color-swatch3;
-						padding:10px;
-					}
-
 				}	/* end inner-item */
 				.clearfix;
 			}	/* end li */

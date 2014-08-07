@@ -523,6 +523,12 @@ body {
 				margin: 1em 0;
 				padding: 0.25em 0;
 				width: 100%;
+				break-inside: avoid;
+				-webkit-column-break-inside: avoid;
+				-moz-column-break-inside: avoid;
+				-ms-column-break-inside: avoid;
+				-o-column-break-inside: avoid;
+				page-break-inside: avoid;
 				&:first-child {
 					margin-top: 0;
 				}
@@ -547,7 +553,7 @@ body {
 
 				&.menu-item-promoted {
 					padding: 1.25em;
-					margin: 2em auto 0.5em;
+					margin: 0 auto 1.5em;
 					border: 3px solid @color-swatch5;
 					z-index: 10;
 					// display: inline-block;
